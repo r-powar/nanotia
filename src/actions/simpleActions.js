@@ -15,3 +15,16 @@ export function frontPageItems(){
     }
 }
 
+export function singlePostItem(value) {
+    return (dispatch) => {
+        fetch(api.singlePost + value).then((response) => {
+            return response.json();
+        }).then((data) => {
+            dispatch({
+                type: types.SINGLE_POST,
+                payload: data.posts[0]
+            })
+        })
+    }
+}
+
