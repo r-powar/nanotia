@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 
-class FirstPageComponent extends Component{
+class FrontPageComponent extends Component{
     render(){
-        console.log("Posts: ", this.props.posts);
 
         return(
             <div>
@@ -27,4 +26,4 @@ class FirstPageComponent extends Component{
     }
 }
 
-export default FirstPageComponent;
+export default FrontPageComponent;

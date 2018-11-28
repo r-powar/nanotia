@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import * as actions from '../../actions/simpleActions';
 import React, {Component} from 'react';
-import FirstPageComponent from '../FirstPageComponent';
+import FrontPageComponent from '../FrontPageComponent';
 
 const mapStateToProps = state => ({
     posts: state.simpleReducer.posts
@@ -27,7 +27,7 @@ class PageContentContainer extends Component{
         return(
             <div>
                 <main>
-                    <FirstPageComponent posts={this.props.posts}/>
+                    <FrontPageComponent posts={this.props.posts}/>
                 </main>
             </div>
         )
