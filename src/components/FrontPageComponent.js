@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 
 class FrontPageComponent extends Component{
     render(){
@@ -11,9 +12,9 @@ class FrontPageComponent extends Component{
                             <div key={idx} className='row frontPageContent'>
                                 <div className="col-12 col-md-12 col-sm-12 col-lg-12">
                                     <h2>
-                                        <a href={'/' + val.slug}>
+                                        <Link to={'/' + val.slug}>
                                             {val.title}
-                                        </a>
+                                        </Link>
                                     </h2>
                                 </div>
                                 <div className="col-12 col-md-12 col-sm-12 col-lg-12">{val.excerpt}</div>

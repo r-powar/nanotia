@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 
-class PageContentContainer extends Component{
+class FrontPageContentContainer extends Component{
 
     componentDidMount(){
         this.props.frontPagePosts();
@@ -34,4 +34,4 @@ class PageContentContainer extends Component{
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PageContentContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FrontPageContentContainer);
