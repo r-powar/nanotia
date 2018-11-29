@@ -13,6 +13,7 @@ const simpleReducer = (state = initialState, action) => {
         }
         case types.SINGLE_POST: {
             let singlePost = {};
+            let articleLimit = action.articleLimit;
             let response = action.payload;
 
             singlePost.title = response.title;
@@ -20,7 +21,7 @@ const simpleReducer = (state = initialState, action) => {
             singlePost.author = response.author.display_name;
             singlePost.readTime = response.read_time;
 
-            return Object.assign({}, state, {singlePost});
+            return Object.assign({}, state, {singlePost, articleLimit});
         }
         default:
             return state;

@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 
 class SinglePostComponent extends Component {
     render() {
+        {/* set css according to limit value*/}
+        let content = this.props.limit ? 'col col-sm-12 col-md-12 col-lg-12 paywall' : 'col col-sm-12 col-md-12 col-lg-12';
+
         return (
             <div>
                 <div className="singlePostContent">
@@ -20,7 +23,7 @@ class SinglePostComponent extends Component {
                     </div>
                     <div className="container">
                         <div className="row">
-                            <div className="col col-sm-12 col-md-12 col-lg-12"
+                            <div className={content}
                                  dangerouslySetInnerHTML={{__html: this.props.postDetails.content}}>
                             </div>
                         </div>
