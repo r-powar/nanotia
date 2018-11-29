@@ -4,8 +4,9 @@ const initialState = {
         title: '',
         content: '',
         author: '',
-        readTime: ''
-    }
+        readTime: '',
+    },
+    articleLimit: false
 };
 
 export default initialState;

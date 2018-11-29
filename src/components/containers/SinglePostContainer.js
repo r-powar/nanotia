@@ -4,7 +4,8 @@ import * as actions from '../../actions/simpleActions';
 import SinglePostComponent from "../SinglePostComponent";
 
 const mapStateToProps = state => ({
-    singlePostDetails: state.simpleReducer.singlePost
+    singlePostDetails: state.simpleReducer.singlePost,
+    articleLimit: state.simpleReducer.articleLimit
 });
 
 const mapDispatchToProps = dispatch => {
@@ -23,11 +24,10 @@ class SinglePostContainer extends Component {
     }
 
     render() {
-        console.log("Single Post: ", this.props.singlePostDetails);
         return (
             <div>
                 <main>
-                    <SinglePostComponent postDetails={this.props.singlePostDetails} />
+                    <SinglePostComponent postDetails={this.props.singlePostDetails} limit={this.props.articleLimit} />
                 </main>
             </div>
         )
